@@ -1,0 +1,30 @@
+body{
+    background-color: #c9af98;
+}
+.home-container{
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+}
+.home-container h1{
+    color: #845007;
+    padding-left: 20px;
+    font-size: 34px;
+}
+ul{
+    color: #845007;
+    list-style: none;
+    padding: 0%;
+    display: flex;
+    margin-left: 50%;
+    text-decoration: none;
+}
+ul li{
+    padding: 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: #845007;
+    font-size: 22px;
+}
