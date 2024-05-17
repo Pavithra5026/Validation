@@ -1,20 +1,35 @@
-<body>
-    <div class="register-container">
-        <form (ngSubmit)="onRegister()" >
-            <h2>Register</h2>
-            <label for="name">Name : </label>
-            <input type="text" placeholder="enter your name" name="name" [(ngModel)]="name" >
-            <br>
-            <label for="email">Email : </label>
-            <input type="email" placeholder="enter your email" name="email"[(ngModel)]="email">
-            <br>
-            <label for="password">Password : </label>
-            <input type="password" placeholder="password" name="password" [(ngModel)]="password">
-            <br>
-            <label for="con-password">Confirm Password : </label>
-            <input type="password" placeholder="re-enter your password" name="con-password" >
-            <br>
-            <button type="submit">Register</button>
-        </form> 
-    </div>
-</body>
+<div class="register-container">
+    <form (ngSubmit)="onRegister()">
+        <h2>Register</h2>
+        <label for="name">Name : </label>
+        <input 
+            type="text" 
+            placeholder="enter your name" 
+            name="name" 
+            [(ngModel)]="Registerogj.name" 
+            required 
+        />
+        <br>
+        <label for="email">Email : </label>
+        <input 
+            type="email" 
+            placeholder="enter your email" 
+            name="email"
+            [(ngModel)]="Registerogj.email"
+            required
+        />
+        <br>
+        <label for="password">Password : </label>
+        <input 
+            type="password" 
+            placeholder="password" 
+            name="password" 
+            [(ngModel)]="Registerogj.password"
+            required
+        />
+        <br>
+        <button type="submit">Register</button>
+    </form> 
+</div>
+
+    

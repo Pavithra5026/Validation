@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpHeaders,HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -10,15 +11,26 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-    email : String='';
-    password : String='';
+    loginobj : any = {
+      email : '',
+    password :'',
+    }
 
+    constructor(private http: HttpClient){}
+    
     onLogin() {
-      if (this.email == 'admin@gmail.com' && this.password == 'admin123') {
-       alert("login successfull")
-      } else {
-        alert("enter valid data")
-      }
+      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+      this.http.post('http://localhost:3000/login', this.loginobj,{ headers, responseType: 'text' })
+        .subscribe(
+          response => {
+            console.log('Login successful', response);
+            alert('Login successful');
+          },
+          error => {
+            console.error('Error during login', error);
+            alert('Invalid email or password');
+          }
+        );
     }
 
 }

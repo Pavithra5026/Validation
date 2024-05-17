@@ -1,6 +1,4 @@
-body{
-    background-color: #c9af98;
-}
+
 *{
     padding: 0;
     justify-content: center;
@@ -11,7 +9,7 @@ body{
    max-width: 450px;
    justify-content: center;
    padding: 50px;
-   transform: translate(80%,10%);
+   transform: translate(80%,20%);
    color: #845007;
 }
 h2 {
